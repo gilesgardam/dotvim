@@ -153,6 +153,8 @@ nnoremap <leader>D :r!date<CR>yypVr=
 nnoremap <leader>e yyp^cfn\end<Esc>
 " Fold the {} you are inside
 nnoremap <leader>f zfa}
+" NERDTree
+nnoremap <leader>n :NERDTree<CR>
 " Open file under the cursor in a new tab
 nnoremap <leader>o <C-w>gf
 " Quit

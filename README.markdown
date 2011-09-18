@@ -8,3 +8,8 @@ Installation
 Create a symlink
 
     ln -s ~/.vim/vimrc ~/.vimrc
+
+Where possible, I've installed plugins as git submodules.
+
+    cd ~/.vim
+    git submodule update --init
