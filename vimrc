@@ -90,6 +90,9 @@ nnoremap X "_x
 " Reselect visual after indenting so we can indent some more
 vnoremap < <gv
 vnoremap > >gv
+" Break undo sequence for <C-u> and <C-w>
+inoremap <C-u> <C-g>u<C-u>
+inoremap <C-w> <C-g>u<C-w>
 
 
 " From Drew Neil's http://vimcasts.org/
