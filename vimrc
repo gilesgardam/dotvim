@@ -101,12 +101,6 @@ inoremap <C-w> <C-g>u<C-w>
 "
 " Automatically source my vimrc file after writing to any file called .vimrc
 autocmd bufwritepost .vimrc source $MYVIMRC
-" Bubble single lines (to Next/Previous line)
-nnoremap <C-n> ddp
-nnoremap <C-p> ddkP
-" Bubble multiple lines in visual mode
-vnoremap <C-n> xp`[V`]
-vnoremap <C-p> xkP`[V`]
 
 
 " Apply strict formatting hints
