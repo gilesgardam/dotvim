@@ -17,6 +17,8 @@ nnoremap j gj
 nnoremap k gk
 " Make windows equal after resize
 au VimResized * exe "normal \<c-w>="
+" Increase command and search pattern history
+set history=1000
 
 
 " Bells and whistles
@@ -95,6 +97,9 @@ vnoremap > >gv
 " Break undo sequence for <C-u> and <C-w>
 inoremap <C-u> <C-g>u<C-u>
 inoremap <C-w> <C-g>u<C-w>
+" Swap ' and ` (` is more useful but less accessible)
+nnoremap ' `
+nnoremap ` '
 
 
 " From Drew Neil's http://vimcasts.org/
