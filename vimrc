@@ -2,6 +2,8 @@
 "
 call pathogen#infect()
 set nocompatible
+" Add support for the Go programming language
+set rtp+=$GOROOT/misc/vim
 syntax on
 filetype plugin indent on
 set nomodeline
@@ -123,6 +125,7 @@ autocmd InsertLeave * match TrailingWhitespace /\s\+$/
 " Insert closing parens
 autocmd Filetype java inoremap <buffer> {<CR> {<CR>}<Esc>O
 
+
 function! s:doStuff()
   if &ft == 'java'
     execute 'write'
@@ -134,6 +137,9 @@ function! s:doStuff()
   elseif &ft == 'tex'
     execute 'write'
     execute '!pdflatex %'
+  elseif &ft == 'go'
+    execute 'write'
+    execute '!8g %; 8l %:r.8; ./8.out'
   else
     echo 'Sorry, this does not look like a file I can handle!'
   endif
