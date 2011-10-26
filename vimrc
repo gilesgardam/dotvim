@@ -149,6 +149,8 @@ endfunction
 let mapleader = ","
 " Clear the highlighting after a search
 nnoremap <silent> <leader>\ :nohlsearch<CR>
+" Ack the word under the cursor
+nnoremap <leader>a :Ack <cword><cr>
 " Convenient black hole access
 nnoremap <leader>b "_
 " Write and compile this Java file
