@@ -150,7 +150,7 @@ let mapleader = ","
 " Clear the highlighting after a search
 nnoremap <silent> <leader>\ :nohlsearch<CR>
 " Ack the word under the cursor
-nnoremap <leader>a :Ack <cword><cr>
+nnoremap <leader>a :Ack <cword><CR>
 " Convenient black hole access
 nnoremap <leader>b "_
 " Write and compile this Java file
@@ -175,6 +175,8 @@ nnoremap <leader>t :tabe
 nnoremap <leader>v :tabnew $MYVIMRC<CR>
 " Write the current file
 nnoremap <leader>w :w<CR>
+" Copy the current file to the X clipboard
+nnoremap <leader>x :!xclip %<CR><CR>:echo "Copied to xclip"<CR>
 " Do stuff according to file type (save/compile/run)
 nnoremap <leader>z :call <SID>doStuff()<CR>
 " 'Underline' with ======== (1 for <h1>Heading</h1>)
