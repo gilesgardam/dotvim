@@ -27,6 +27,18 @@ set title
 set wildignore=*.swp,*.bak,*.pyc,*.class,*.aux,*.log
 " Toggle INSERT (paste) mode (to avoid autoindents etc.)
 set pastetoggle=<F2>
+" Status line
+set laststatus=2             " always show the status line
+set statusline=
+set statusline+=\ %n\ %*    " buffer number
+set statusline+=%{&ff}%*    " file format
+set statusline+=%y%*        " file type
+set statusline+=\ %<%F%*    " full path
+set statusline+=%m%*        " modified flag
+set statusline+=%=%5l%*     " current line
+set statusline+=/%L%*       " total lines
+set statusline+=%4c\ %*     " column number
+set statusline+=0x%04B\ %*  " character under cursor
 
 
 " Spelling
