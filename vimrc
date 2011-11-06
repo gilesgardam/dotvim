@@ -19,6 +19,8 @@ nnoremap k gk
 au VimResized * exe "normal \<c-w>="
 " Increase command and search pattern history
 set history=1000
+" Let me hide those modified buffers!
+set hidden
 
 
 " Bells and whistles
