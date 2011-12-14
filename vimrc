@@ -16,7 +16,7 @@ set linebreak
 nnoremap j gj
 nnoremap k gk
 " Make windows equal after resize
-au VimResized * exe "normal \<c-w>="
+au VimResized * exe "normal \<C-w>="
 " Increase command and search pattern history
 set history=1000
 " Let me hide those modified buffers!
@@ -161,6 +161,8 @@ endfunction
 " Leader maps
 "
 let mapleader = ","
+" Quickly switch to previous buffer
+nnoremap <leader><leader> <C-^>
 " Clear the highlighting after a search
 nnoremap <silent> <leader>\ :nohlsearch<CR>
 " Ack the word under the cursor
