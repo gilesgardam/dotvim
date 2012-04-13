@@ -21,6 +21,9 @@ au VimResized * exe "normal \<C-w>="
 set history=1000
 " Let me hide those modified buffers!
 set hidden
+" Put backups and swap files in a separate directory
+set backupdir=~/tmp
+set directory=~/tmp
 
 
 " Bells and whistles
@@ -114,12 +117,10 @@ inoremap <C-w> <C-g>u<C-w>
 " Swap ' and ` (` is more useful but less accessible)
 nnoremap ' `
 nnoremap ` '
-
-
-" From Drew Neil's http://vimcasts.org/
-"
-" Automatically source my vimrc file after writing to any file called .vimrc
-autocmd bufwritepost .vimrc source $MYVIMRC
+" Navigate clist more easily
+nnoremap <C-LEFT> :cprev<CR>
+nnoremap <C-RIGHT> :cnext<CR>
+nnoremap <C-DOWN> :clist!<CR>
 
 
 " Apply strict formatting hints
@@ -133,10 +134,13 @@ augroup END
 autocmd InsertEnter * match none
 autocmd InsertLeave * match TrailingWhitespace /\s\+$/
 
+
 " Java specific
 "
 " Insert closing parens
 autocmd Filetype java inoremap <buffer> {<CR> {<CR>}<Esc>O
+" Make with javac if no Makefile present
+autocmd Filetype java if !filereadable(expand('%:p:h').'/Makefile') | setlocal makeprg=javac\ % | endif
 
 
 function! s:doStuff()
@@ -179,6 +183,8 @@ nnoremap <leader>D :r!date<CR>yypVr=
 nnoremap <leader>e yyp^cfn\end<Esc>
 " Fold the {} you are inside
 nnoremap <leader>f zfa}
+" Make
+nnoremap <leader>m :w<CR>:make<CR>
 " NERDTree
 nnoremap <leader>n :NERDTree<CR>
 " Open file under the cursor in a new tab
