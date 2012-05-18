@@ -140,7 +140,7 @@ autocmd InsertLeave * match TrailingWhitespace /\s\+$/
 " Insert closing parens
 autocmd Filetype java inoremap <buffer> {<CR> {<CR>}<Esc>O
 " Make with javac if no Makefile present
-autocmd Filetype java if !filereadable(expand('%:p:h').'/Makefile') | setlocal makeprg=javac\ % | endif
+autocmd Filetype java if !filereadable(expand('%:p:h').'/Makefile') | setlocal makeprg=javac\ -Xlint\ % | endif
 
 
 function! s:doStuff()
@@ -192,7 +192,7 @@ nnoremap <leader>o <C-w>gf
 " Quit
 nnoremap <leader>q :q<CR>
 " Prepare to open a file in a new tabe
-nnoremap <leader>t :tabe 
+nnoremap <leader>t :tabedit 
 " Open the vimrc for editing in a new tab
 nnoremap <leader>v :tabnew $MYVIMRC<CR>
 " Write the current file
