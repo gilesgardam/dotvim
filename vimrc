@@ -121,6 +121,10 @@ nnoremap ` '
 nnoremap <C-LEFT> :cprev<CR>
 nnoremap <C-RIGHT> :cnext<CR>
 nnoremap <C-DOWN> :clist!<CR>
+" Toggle // comments on visually selected lines
+" It maps <C-/> in a weird platform dependent way, but hey, it works for me!
+vnoremap <C-_> :normal I//<CR>gv:s:\(^\s*\)////:\1:e<CR>:<DEL>
+nnoremap <C-_> I//<ESC>:s:\(^\s*\)////:\1:e<CR>:<DEL>
 
 
 " Apply strict formatting hints
