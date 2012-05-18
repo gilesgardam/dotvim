@@ -1,0 +1,19 @@
+Use :make and quickfix! (Accessible via <leader>m.)
+
+Use <c-x><c-l> to complete whole lines (and look at other :help ins-completion).
+
+Complicated regular expressions are nice enough with /, since you get
+highlighting, but can be difficult with :substitute, because you don't. So do
+something like /complicatedregex, check highlighting, then use the empty regex
+to match it, for example in :%s///g with <leader>r to delete. You can also
+<c-r>/ to pull from tHE search register (or any other register).
+
+gi goes into insert mode where you last left it.
+
+ge is the opposite of e, like b is the opposite of w.
+
+gf opens the file whose name is under the cursor.
+
+Dial :h for help (it's quicker).
+
+Use the ex command :norm (e.g. to do something on all visually selected lines).

@@ -13,3 +13,6 @@ Where possible, I've installed plugins as git submodules.
 
     cd ~/.vim
     git submodule update --init
+
+Abbreviations go in plugin/abbreviations.vim.
+Any tips or tricks you want to remember go in notes.txt.
