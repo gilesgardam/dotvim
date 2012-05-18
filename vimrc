@@ -191,6 +191,8 @@ nnoremap <leader>n :NERDTree<CR>
 nnoremap <leader>o <C-w>gf
 " Quit
 nnoremap <leader>q :q<CR>
+" Delete the most recently searched for regex
+nnoremap <leader>r :%s///g<CR>
 " Prepare to open a file in a new tabe
 nnoremap <leader>t :tabedit 
 " Open the vimrc for editing in a new tab
