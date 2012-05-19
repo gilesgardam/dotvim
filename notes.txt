@@ -17,3 +17,5 @@ gf opens the file whose name is under the cursor.
 Dial :h for help (it's quicker).
 
 Use the ex command :norm (e.g. to do something on all visually selected lines).
+
+gu and gU change to lower and upper case respectively (they take motions!).

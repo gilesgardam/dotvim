@@ -185,8 +185,10 @@ nnoremap <leader>d :r!date +\%x<CR>
 nnoremap <leader>D :r!date<CR>yypVr=
 " Duplicate the current line and change \begin to \end (LaTeX hack)
 nnoremap <leader>e yyp^cfn\end<Esc>
+" Expand "i n" into a "for (int i = 0; i < n; ++i) { }" loop.
+nnoremap <leader>f ^yt ifor (int <Esc>ea = 0; <Esc> Pa <<Esc>ea; ++<Esc>b$pA) {<CR>}<Esc>O
 " Fold the {} you are inside
-nnoremap <leader>f zfa}
+nnoremap <leader>F zfa}
 " Make
 nnoremap <leader>m :w<CR>:make<CR>
 " NERDTree
@@ -199,8 +201,8 @@ nnoremap <leader>q :q<CR>
 nnoremap <leader>r :%s///g<CR>
 " Prepare to open a file in a new tabe
 nnoremap <leader>t :tabedit 
-" Open the vimrc for editing in a new tab
-nnoremap <leader>v :tabnew $MYVIMRC<CR>
+" Open the vimrc for editing
+nnoremap <leader>v :e $MYVIMRC<CR>
 " Write the current file
 nnoremap <leader>w :w<CR>
 " Copy the current file to the X clipboard
