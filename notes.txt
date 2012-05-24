@@ -19,3 +19,12 @@ Dial :h for help (it's quicker).
 Use the ex command :norm (e.g. to do something on all visually selected lines).
 
 gu and gU change to lower and upper case respectively (they take motions!).
+
+Default register is ", so use <c-r>" to paste from it on cmd line.
+
+Use :g and :v for quick-and-easy grepping.
+
+Type q/ to bring up search history (just like the 'fail quit' that brings up
+cmd line q:).
+
+Use :g/pattern/norm @q for magic.
