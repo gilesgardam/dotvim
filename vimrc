@@ -33,8 +33,8 @@ set wildignore=*.swp,*.bak,*.pyc,*.class,*.aux,*.log
 " Toggle INSERT (paste) mode (to avoid autoindents etc.)
 set pastetoggle=<F2>
 " Status line
-set laststatus=2             " always show the status line
-set statusline=
+set laststatus=2            " always show the status line
+set statusline=             " empty the status line
 set statusline+=\ %n\ %*    " buffer number
 set statusline+=%{&ff}%*    " file format
 set statusline+=%y%*        " file type
@@ -173,16 +173,18 @@ let mapleader = ","
 nnoremap <leader><leader> <C-^>
 " Clear the highlighting after a search
 nnoremap <silent> <leader>\ :nohlsearch<CR>
+" Delete the most recently searched for regex
+nnoremap <leader>/d :%s///g<CR>
 " Ack the word under the cursor
 nnoremap <leader>a :Ack <cword><CR>
 " Convenient black hole access
 nnoremap <leader>b "_
-" Write and compile this Java file
-nnoremap <leader>c :w<CR>:!javac %<CR>
+" Copy the current file to the X clipboard
+nnoremap <leader>c :!xclip %<CR><CR>:echo "Copied to xclip"<CR>
 " Get the current date in the locale's format (e.g. 31/12/99)
-nnoremap <leader>d :r!date +\%x<CR>
+nnoremap <leader>DD :r!date +\%x<CR>
 " Get the current full date and 'underline' with ========
-nnoremap <leader>D :r!date<CR>yypVr=
+nnoremap <leader>DL :r!date<CR>yypVr=
 " Duplicate the current line and change \begin to \end (LaTeX hack)
 nnoremap <leader>e yyp^cfn\end<Esc>
 " Expand "i n" into a "for (int i = 0; i < n; ++i) { }" loop.
@@ -193,20 +195,12 @@ nnoremap <leader>F zfa}
 nnoremap <leader>m :w<CR>:make<CR>
 " NERDTree
 nnoremap <leader>n :NERDTree<CR>
-" Open file under the cursor in a new tab
-nnoremap <leader>o <C-w>gf
 " Quit
 nnoremap <leader>q :q<CR>
-" Delete the most recently searched for regex
-nnoremap <leader>r :%s///g<CR>
-" Prepare to open a file in a new tabe
-nnoremap <leader>t :tabedit 
 " Open the vimrc for editing
 nnoremap <leader>v :e $MYVIMRC<CR>
 " Write the current file
 nnoremap <leader>w :w<CR>
-" Copy the current file to the X clipboard
-nnoremap <leader>x :!xclip %<CR><CR>:echo "Copied to xclip"<CR>
 " Do stuff according to file type (save/compile/run)
 nnoremap <leader>z :call <SID>doStuff()<CR>
 " 'Underline' with ======== (1 for <h1>Heading</h1>)
@@ -215,5 +209,3 @@ nnoremap <leader>1 yypVr=
 nnoremap <leader>2 yypVr-
 " Hard-wrap paragraphs of text (8 for 80)
 nnoremap <leader>8 gqip
-" Prepare to repeat last command
-nnoremap <leader>; :<UP>
