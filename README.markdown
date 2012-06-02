@@ -16,3 +16,4 @@ Where possible, I've installed plugins as git submodules.
 
 Abbreviations go in plugin/abbreviations.vim.
 Any tips or tricks you want to remember go in notes.txt.
+Settings local to the particular machine go in plugin/local.vim.
