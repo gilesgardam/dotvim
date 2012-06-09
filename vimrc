@@ -102,6 +102,8 @@ set wildmode=list:longest
 
 " Some little mappings
 "
+" Copy visually selected text to system clipboard
+vnoremap <C-c> "+y
 " FTFY
 nnoremap Y y$
 " It is annoying to overwrite the default register when
@@ -121,10 +123,12 @@ nnoremap ` '
 nnoremap <C-LEFT> :cprev<CR>
 nnoremap <C-RIGHT> :cnext<CR>
 nnoremap <C-DOWN> :clist!<CR>
-" Toggle // comments on visually selected lines
+" Toggle // comments on current or visually selected lines
 " It maps <C-/> in a weird platform dependent way, but hey, it works for me!
 vnoremap <C-_> :normal I//<CR>gv:s:\(^\s*\)////:\1:e<CR>:<DEL>
 nnoremap <C-_> I//<ESC>:s:\(^\s*\)////:\1:e<CR>:<DEL>
+" PANIC!
+nnoremap <F9> mzggg?G'z
 
 
 " Apply strict formatting hints
@@ -180,7 +184,7 @@ nnoremap <leader>a :Ack <cword><CR>
 " Convenient black hole access
 nnoremap <leader>b "_
 " Copy the current file to the X clipboard
-nnoremap <leader>c :!xclip %<CR><CR>:echo "Copied to xclip"<CR>
+nnoremap <leader>c :!xclip -selection clipboard %<CR><CR>:echo "Copied to X clipboard"<CR>
 " Get the current date in the locale's format (e.g. 31/12/99)
 nnoremap <leader>DD :r!date +\%x<CR>
 " Get the current full date and 'underline' with ========
