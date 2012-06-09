@@ -192,7 +192,7 @@ nnoremap <leader>DL :r!date<CR>yypVr=
 " Duplicate the current line and change \begin to \end (LaTeX hack)
 nnoremap <leader>e yyp^cfn\end<Esc>
 " Expand "i n" into a "for (int i = 0; i < n; ++i) { }" loop.
-nnoremap <leader>f ^yt ifor (int <Esc>ea = 0; <Esc> Pa <<Esc>ea; ++<Esc>b$pA) {<CR>}<Esc>O
+inoremap <c-f> <C-g>u<Esc>^yt ifor (int <Esc>t a = 0; <Esc>pa <<Esc>$a; ++<Esc>b$pA) {<CR>}<Esc>O
 " Fold the {} you are inside
 nnoremap <leader>F zfa}
 " Make
