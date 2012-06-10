@@ -30,3 +30,5 @@ cmd line q:).
 Use :g/pattern/norm @q for magic.
 
 Use <C-p> and <C-n> to scroll command and search history (rather than arrows).
+
+OMG: <C-o> and <C-i>, jump list magic.

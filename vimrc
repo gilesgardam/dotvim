@@ -83,19 +83,20 @@ set expandtab
 "
 set ignorecase
 set smartcase
-set showmatch
 set incsearch
 set hlsearch " can get rather annoying, so we map a leader command below
 " Make search 'very magic', i.e. mostly Perl-like regex
 " nnoremap / /\v
-nnoremap <tab> %
-vnoremap <tab> %
+" Use tab to jump between matching brackets (destroys <C-i>, see :help ctrl-i)
+" nnoremap <tab> %
+" vnoremap <tab> %
 
 
 " Context
 "
 set ruler
 set showcmd " show partial commands
+set showmatch
 set wildmenu
 set wildmode=list:longest
 
@@ -143,32 +144,19 @@ autocmd InsertEnter * match none
 autocmd InsertLeave * match TrailingWhitespace /\s\+$/
 
 
-" Java specific
-"
-" Insert closing parens
-autocmd Filetype java inoremap <buffer> {<CR> {<CR>}<Esc>O
-" Make with javac if no Makefile present
-autocmd Filetype java if !filereadable(expand('%:p:h').'/Makefile') | setlocal makeprg=javac\ -Xlint\ % | endif
-
-
-function! s:doStuff()
+function! s:runStuff()
   if &ft == 'java'
-    execute 'write'
-    execute '!javac %'
     execute '!java %:r'
   elseif &ft == 'python'
     execute 'write'
     execute '!python %'
   elseif &ft == 'tex'
-    execute 'write'
-    execute '!pdflatex %'
-  elseif &ft == 'go'
-    execute 'write'
-    execute '!8g %; 8l %:r.8; ./8.out'
+    execute '!open %:r.pdf'
   else
     echo 'Sorry, this does not look like a file I can handle!'
   endif
 endfunction
+
 
 " Leader maps
 "
@@ -195,7 +183,7 @@ nnoremap <leader>e yyp^cfn\end<Esc>
 inoremap <c-f> <C-g>u<Esc>^yt ifor (int <Esc>t a = 0; <Esc>pa <<Esc>$a; ++<Esc>b$pA) {<CR>}<Esc>O
 " Fold the {} you are inside
 nnoremap <leader>F zfa}
-" Make
+" Write and make
 nnoremap <leader>m :w<CR>:make<CR>
 " NERDTree
 nnoremap <leader>n :NERDTree<CR>
@@ -205,8 +193,8 @@ nnoremap <leader>q :q<CR>
 nnoremap <leader>v :e $MYVIMRC<CR>
 " Write the current file
 nnoremap <leader>w :w<CR>
-" Do stuff according to file type (save/compile/run)
-nnoremap <leader>z :call <SID>doStuff()<CR>
+" Run the current file's 'binary'
+nnoremap <leader>z :call <SID>runStuff()<CR>
 " 'Underline' with ======== (1 for <h1>Heading</h1>)
 nnoremap <leader>1 yypVr=
 " 'Underline' with -------- (2 for <h2>Heading</h2>)
