@@ -201,3 +201,5 @@ nnoremap <leader>1 yypVr=
 nnoremap <leader>2 yypVr-
 " Hard-wrap paragraphs of text (8 for 80)
 nnoremap <leader>8 gqip
+" Continue [fFtT] search backwards (opposite to ;)
+nnoremap <leader>; ,
