@@ -101,6 +101,12 @@ set wildmenu
 set wildmode=list:longest
 
 
+" Filetypes
+"
+" Vim, don't go thinking I'm using plain ol' tex!
+let g:tex_flavor = "latex"
+
+
 " Some little mappings
 "
 " Copy visually selected text to system clipboard
