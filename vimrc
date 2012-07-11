@@ -126,16 +126,25 @@ inoremap <C-w> <C-g>u<C-w>
 " Swap ' and ` (` is more useful but less accessible)
 nnoremap ' `
 nnoremap ` '
-" Navigate clist more easily
-nnoremap <C-LEFT> :cprev<CR>
-nnoremap <C-RIGHT> :cnext<CR>
-nnoremap <C-DOWN> :clist!<CR>
 " Toggle // comments on current or visually selected lines
 " It maps <C-/> in a weird platform dependent way, but hey, it works for me!
 vnoremap <C-_> :normal I//<CR>gv:s:\(^\s*\)////:\1:e<CR>:<DEL>
 nnoremap <C-_> I//<ESC>:s:\(^\s*\)////:\1:e<CR>:<DEL>
 " PANIC!
 nnoremap <F9> mzggg?G'z
+
+
+" Location
+"
+" Move between windows
+nnoremap <LEFT> <C-w>h
+nnoremap <DOWN> <C-w>j
+nnoremap <UP> <C-w>k
+nnoremap <RIGHT> <C-w>l
+" Navigate clist more easily
+nnoremap <C-LEFT> :cprev<CR>
+nnoremap <C-RIGHT> :cnext<CR>
+nnoremap <C-DOWN> :clist!<CR>
 
 
 " Apply strict formatting hints

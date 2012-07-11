@@ -21,5 +21,7 @@ For the backup and swap files, you need to either
 or change the vimrc to taste.
 
 Abbreviations go in plugin/abbreviations.vim.
+
 Any tips or tricks you want to remember go in notes.txt.
+
 Settings local to the particular machine go in plugin/local.vim.
