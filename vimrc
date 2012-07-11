@@ -142,9 +142,13 @@ nnoremap <DOWN> <C-w>j
 nnoremap <UP> <C-w>k
 nnoremap <RIGHT> <C-w>l
 " Navigate clist more easily
-nnoremap <C-LEFT> :cprev<CR>
-nnoremap <C-RIGHT> :cnext<CR>
-nnoremap <C-DOWN> :clist!<CR>
+" (The messing around with QFFocus is there to bring the error message to
+" the top of the quickfix window, without moving around in the main window
+" if the quickfix window isn't open.)
+nnoremap <Plug>QFFocus mzHmy<C-w>jzt<C-w>k'yzt`z
+nmap <silent> <C-LEFT> :cprevious<CR><Plug>QFFocus
+nmap <silent> <C-RIGHT> :cnext<CR><Plug>QFFocus
+nnoremap <C-DOWN> :cwindow 5<CR><C-w>k
 
 
 " Apply strict formatting hints
