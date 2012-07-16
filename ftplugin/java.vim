@@ -9,7 +9,6 @@ endif
 iabbrev <buffer> Ar Arrays
 iabbrev <buffer> Bo Boolean
 iabbrev <buffer> Ch Character
-iabbrev <buffer> Do Double
 iabbrev <buffer> In Integer
 iabbrev <buffer> Li List
 iabbrev <buffer> Lo Long
