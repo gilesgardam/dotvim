@@ -32,3 +32,9 @@ Use :g/pattern/norm @q for magic.
 Use <C-p> and <C-n> to scroll command and search history (rather than arrows).
 
 OMG: <C-o> and <C-i>, jump list magic.
+
+OMG: Refer to a register in uppercase to append to it.
+
+Spelling: zg marks as good, [s and ]s jump to errors, z= pulls up suggestions.
+
+Use closing paren/bracket/brace with surround.vim to avoid the extra spaces.
