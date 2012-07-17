@@ -174,6 +174,8 @@ function! s:runStuff()
     execute '!python %'
   elseif &ft == 'tex'
     execute '!open %:r.pdf'
+  elseif &ft == 'markdown'
+    execute '!open %:r.html'
   else
     echo 'Sorry, this does not look like a file I can handle!'
   endif
