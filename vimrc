@@ -174,6 +174,8 @@ function! s:runStuff()
   elseif &ft == 'python'
     execute 'write'
     execute '!python %'
+  elseif &ft == 'c'
+    execute '!./a.out'
   elseif &ft == 'tex'
     execute '!open %:r.pdf'
   elseif &ft == 'markdown'
