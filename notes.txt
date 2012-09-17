@@ -38,3 +38,9 @@ OMG: Refer to a register in uppercase to append to it.
 Spelling: zg marks as good, [s and ]s jump to errors, z= pulls up suggestions.
 
 Use closing paren/bracket/brace with surround.vim to avoid the extra spaces.
+
+Use g$ to go to the end of the screen line (like with gj and gk).
+
+Use windows (vim windows, not microsoft windows)!
+
+To "filter" visually selected text without replacing it, type `:w !cmd`.
