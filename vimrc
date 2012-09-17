@@ -215,8 +215,6 @@ nnoremap <leader>c :!xclip -selection clipboard %<CR><CR>:echo "Copied to X clip
 nnoremap <leader>DD :r!date +\%x<CR>
 " Get the current full date and 'underline' with ========
 nnoremap <leader>DL :r!date<CR>yypVr=
-" Duplicate the current line and change \begin to \end (LaTeX hack)
-nnoremap <leader>e yyp^cfn\end<Esc>
 " Fold the {} you are inside
 nnoremap <leader>F zfa}
 " Write and make
