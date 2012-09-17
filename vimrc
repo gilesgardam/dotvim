@@ -53,9 +53,6 @@ set statusline+=0x%04B\ %*  " character under cursor
 set spelllang=en
 " Toggle spelling
 nnoremap <silent> <F3> :set spell!<CR>
-" Enable spelling by default for some filetypes
-autocmd BufNewFile,BufRead *.txt set spell
-autocmd BufNewFile,BufRead *.md set spell
 
 
 " Gundo
