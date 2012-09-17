@@ -24,6 +24,8 @@ set hidden
 " Put backups and swap files in a separate directory
 set backupdir=~/tmp
 set directory=~/tmp
+" Enable awesome
+let mapleader = ","
 
 
 " Bells and whistles
@@ -182,9 +184,21 @@ function! s:runStuff()
 endfunction
 
 
+" 1337 programming maps
+"
+" Add a debug command for the function signature on this line, e.g.
+"     int myFunction(int[][] dp, HashMap<Long,Integer> values, String word) {
+" becomes
+"         d("myFunction", dp, values, word);
+nnoremap <leader>d yyp:s/[^ \t()]*[^ \t(),] //g<CR>Id("<Esc>f(s", <Esc>f)C);<Esc>>>:nohls<CR>
+" Expand `var` into `d("var", var);`
+inoremap <C-d> <C-g>u<Esc>^y$id("<Esc>$a", <C-o>p);
+" Expand `i n` into a `for (int i = 0; i < n; ++i) { }` loop
+inoremap <C-f> <C-g>u<Esc>:s/\v(\S+)\s+(\S+)/for (int \1 = 0; \1 < \2; ++\1)/<CR>:nohls<CR>A {<CR>
+
+
 " Leader maps
 "
-let mapleader = ","
 " Quickly switch to previous buffer
 nnoremap <leader><leader> <C-^>
 " Clear the highlighting after a search
@@ -203,8 +217,6 @@ nnoremap <leader>DD :r!date +\%x<CR>
 nnoremap <leader>DL :r!date<CR>yypVr=
 " Duplicate the current line and change \begin to \end (LaTeX hack)
 nnoremap <leader>e yyp^cfn\end<Esc>
-" Expand "i n" into a "for (int i = 0; i < n; ++i) { }" loop.
-inoremap <c-f> <C-g>u<Esc>^yt ifor (int <Esc>t a = 0; <Esc>pa <<Esc>$a; ++<Esc>b$pA) {<CR>}<Esc>O
 " Fold the {} you are inside
 nnoremap <leader>F zfa}
 " Write and make
