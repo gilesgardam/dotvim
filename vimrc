@@ -200,8 +200,6 @@ inoremap <C-f> <C-g>u<Esc>:s/\v(\S+)\s+(\S+)/for (int \1 = 0; \1 < \2; ++\1)/<CR
 "
 " Quickly switch to previous buffer
 nnoremap <leader><leader> <C-^>
-" Clear the highlighting after a search
-nnoremap <silent> <leader>\ :nohlsearch<CR>
 " Delete the most recently searched for regex
 nnoremap <leader>/d :%s///g<CR>
 " Ack the word under the cursor
@@ -216,6 +214,11 @@ nnoremap <leader>DD :r!date +\%x<CR>
 nnoremap <leader>DL :r!date<CR>yypVr=
 " Fold the {} you are inside
 nnoremap <leader>F zfa}
+" Toggle search highlighting
+nnoremap <silent> <leader>h :nohls<CR>
+nnoremap <silent> <leader>\ :nohls<CR>
+" Highlight a word without moving the cursor
+nnoremap <leader>H :let @/=''<Left>
 " Write and make
 nnoremap <leader>m :w<CR>:make<CR>
 " NERDTree
