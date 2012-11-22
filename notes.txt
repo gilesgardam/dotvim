@@ -44,3 +44,11 @@ Use g$ to go to the end of the screen line (like with gj and gk).
 Use windows (vim windows, not microsoft windows)!
 
 To "filter" visually selected text without replacing it, type `:w !cmd`.
+
+To paste code to be aligned, use [p (it's like "match destination indentation").
+
+Use \r to get a newline in :substitute.
+
+Use g; and g, to navigate the change list.
+
+The 0 register stores yanked text, but not deleted text.
