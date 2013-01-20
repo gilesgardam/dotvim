@@ -52,3 +52,7 @@ Use \r to get a newline in :substitute.
 Use g; and g, to navigate the change list.
 
 The 0 register stores yanked text, but not deleted text.
+
+Append /e to a regex search to go to the end of match (//e if you forgot).
+
+Use o to go to the Other end of a visual selection.
