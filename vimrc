@@ -139,10 +139,7 @@ nnoremap <F9> mzggg?G'z
 " Location
 "
 " Move between windows
-nnoremap <LEFT> <C-w>h
-nnoremap <DOWN> <C-w>j
-nnoremap <UP> <C-w>k
-nnoremap <RIGHT> <C-w>l
+nnoremap [ <C-w>w
 " Navigate clist more easily
 " (The messing around with QFFocus is there to bring the error message to
 " the top of the quickfix window, without moving around in the main window
