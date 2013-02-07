@@ -39,7 +39,7 @@ Spelling: zg marks as good, [s and ]s jump to errors, z= pulls up suggestions.
 
 Use closing paren/bracket/brace with surround.vim to avoid the extra spaces.
 
-Use g$ to go to the end of the screen line (like with gj and gk).
+Use g$ to go to the end of the screen line (like with gj and gk, also g^).
 
 Use windows (vim windows, not microsoft windows)!
 
@@ -56,3 +56,11 @@ The 0 register stores yanked text, but not deleted text.
 Append /e to a regex search to go to the end of match (//e if you forgot).
 
 Use o to go to the Other end of a visual selection.
+
+Use = to fix up your indentation.
+
+Use <C-r>= to access the expression register.
+
+Use `:argdo` to run a command across all the buffers in `:args`.
+
+Use regular expressions \zs \ze in :substitute.
