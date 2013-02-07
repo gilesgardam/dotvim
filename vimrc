@@ -26,6 +26,10 @@ set backupdir=~/tmp
 set directory=~/tmp
 " Enable awesome
 let mapleader = ","
+" Don't redraw during macros etc.
+set lazyredraw
+" Because I have ten fingers, not eight, and like leading zeros
+set nrformats=hex
 
 
 " Bells and whistles
@@ -126,8 +130,10 @@ vnoremap > >gv
 inoremap <C-u> <C-g>u<C-u>
 inoremap <C-w> <C-g>u<C-w>
 " Swap ' and ` (` is more useful but less accessible)
-nnoremap ' `
-nnoremap ` '
+" Note that we want to have these done in 'mapmode-nvo', so that they work
+" across normal, visual and operator-pending modes.
+noremap ' `
+noremap ` '
 " Toggle // comments on current or visually selected lines
 " It maps <C-/> in a weird platform dependent way, but hey, it works for me!
 vnoremap <C-_> :normal I//<CR>gv:s:\(^\s*\)////:\1:e<CR>:<DEL>
