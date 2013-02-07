@@ -134,10 +134,9 @@ inoremap <C-w> <C-g>u<C-w>
 " across normal, visual and operator-pending modes.
 noremap ' `
 noremap ` '
-" Toggle // comments on current or visually selected lines
-" It maps <C-/> in a weird platform dependent way, but hey, it works for me!
-vnoremap <C-_> :normal I//<CR>gv:s:\(^\s*\)////:\1:e<CR>:<DEL>
-nnoremap <C-_> I//<ESC>:s:\(^\s*\)////:\1:e<CR>:<DEL>
+" Comment lines using the vim-commentary plugin
+xmap <C-_> <Plug>Commentary
+nmap <C-_> <Plug>CommentaryLine
 " PANIC!
 nnoremap <F9> mzggg?G'z
 
