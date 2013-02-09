@@ -185,19 +185,6 @@ function! s:runStuff()
 endfunction
 
 
-" 1337 programming maps
-"
-" Add a debug command for the function signature on this line, e.g.
-"     int myFunction(int[][] dp, HashMap<Long,Integer> values, String word) {
-" becomes
-"         d("myFunction", dp, values, word);
-nnoremap <leader>d yyp:s/[^ \t()]*[^ \t(),] //g<CR>Id("<Esc>f(s", <Esc>f)C);<Esc>>>:nohls<CR>
-" Expand `var` into `d("var", var);`
-inoremap <C-d> <C-g>u<Esc>^y$id("<Esc>$a", <C-o>p);
-" Expand `i n` into a `for (int i = 0; i < n; ++i) { }` loop
-imap <C-f> <C-g>u<Esc>:s/\v(\S+)\s+(\S+)/for (int \1 = 0; \1 < \2; ++\1)/<CR>:nohls<CR>A {<CR>
-
-
 " Leader maps
 "
 " Quickly switch to previous buffer
