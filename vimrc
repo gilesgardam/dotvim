@@ -117,6 +117,8 @@ let g:tex_flavor = "latex"
 "
 " Copy visually selected text to system clipboard
 vnoremap <C-c> "+y
+" Copy entire file to system clipboard
+nnoremap <C-c> :% yank +<CR>
 " FTFY
 nnoremap Y y$
 " It is annoying to overwrite the default register when
