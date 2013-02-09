@@ -214,10 +214,14 @@ nnoremap <leader>m :w<CR>:make<CR>
 nnoremap <leader>n :NERDTree<CR>
 " Quit
 nnoremap <leader>q :q<CR>
+" Choose a recently opened file
+nnoremap <leader>r :browse oldfiles<CR>
 " Open the vimrc for editing
 nnoremap <leader>v :e $MYVIMRC<CR>
 " Write the current file
 nnoremap <leader>w :w<CR>
+" Write and quit
+nnoremap <leader>x :x<CR>
 " Run the current file's 'binary'
 nnoremap <leader>z :call <SID>runStuff()<CR>
 " 'Underline' with ======== (1 for <h1>Heading</h1>)
