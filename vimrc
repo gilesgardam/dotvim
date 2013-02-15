@@ -233,6 +233,10 @@ nnoremap <leader>n :NERDTree<CR>
 nnoremap <leader>q :q<CR>
 " Choose a recently opened file
 nnoremap <leader>r :browse oldfiles<CR>
+" Swap with previously deleted text
+" WARNING: If you are swapping two chunks of text on the same line, then you
+" have to start by deleting the chunk that is first from the left.
+vnoremap <leader>s <ESC>`.``gvP``P
 " Open the vimrc for editing
 nnoremap <leader>v :e $MYVIMRC<CR>
 " Write the current file
