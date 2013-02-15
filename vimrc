@@ -146,14 +146,29 @@ nnoremap <F9> mzggg?G'z
 " Location
 "
 " Move between windows
-nnoremap [ <C-w>w
+" nnoremap [[ <C-w>w
+" nnoremap ]] <C-w>W
+nnoremap [w <C-w>h
+nnoremap ]w <C-w>l
+" Move between files
+nnoremap [a :previous<CR>
+nnoremap ]a :next<CR>
+nnoremap [A :first<CR>
+nnoremap ]A :last<CR>
+" Move between buffers
+nnoremap [b :bprevious<CR>
+nnoremap ]b :bnext<CR>
+nnoremap [B :bfirst<CR>
+nnoremap ]B :blast<CR>
 " Navigate clist more easily
 " (The messing around with QFFocus is there to bring the error message to
 " the top of the quickfix window, without moving around in the main window
 " if the quickfix window isn't open.)
 nnoremap <Plug>QFFocus mzHmy<C-w>jzt<C-w>k'yzt`z
-nmap <silent> <C-LEFT> :cprevious<CR><Plug>QFFocus
-nmap <silent> <C-RIGHT> :cnext<CR><Plug>QFFocus
+nnoremap <silent> [q :cprevious<CR><Plug>QFFocus
+nnoremap <silent> ]q :cnext<CR><Plug>QFFocus
+nnoremap <silent> [Q :cfirst<CR><Plug>QFFocus
+nnoremap <silent> ]Q :clast<CR><Plug>QFFocus
 nnoremap <C-DOWN> :cwindow 5<CR><C-w>k
 
 
