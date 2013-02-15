@@ -57,10 +57,12 @@ Append /e to a regex search to go to the end of match (//e if you forgot).
 
 Use o to go to the Other end of a visual selection.
 
-Use = to fix up your indentation.
+Use = to fix up your indentation (example: after bubbling lines around).
 
 Use <C-r>= to access the expression register.
 
 Use `:argdo` to run a command across all the buffers in `:args`.
 
 Use regular expressions \zs \ze in :substitute.
+
+Type `:b` and then you can tab complete to an open buffer.
