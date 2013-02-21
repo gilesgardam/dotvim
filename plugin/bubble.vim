@@ -1,9 +1,6 @@
 " Bubbling stolen from Tim Pope's vim-unimpaired plugin.
 " See https://github.com/tpope/vim-unimpaired/
 "
-" Note: This is currently in $VIMHOME/after/plugin because bisect.vim maps
-" <c-n> (and I think I shouldn't solve this problem by editing bisect's
-" source). Hopefully I will find a better solution than this someday...
 function! s:Move(cmd, count, map) abort
   normal! m`
   exe 'move'.a:cmd.a:count
