@@ -215,9 +215,9 @@ nnoremap <leader>b "_
 " Copy the current file to the X clipboard
 nnoremap <leader>c :!xclip -selection clipboard %<CR><CR>:echo "Copied to X clipboard"<CR>
 " Get the current date in the locale's format (e.g. 31/12/99)
-nnoremap <leader>DD :r!date +\%x<CR>
+nnoremap <leader>DD i<C-r>=strftime('%D')<CR><ESC>
 " Get the current full date and 'underline' with ========
-nnoremap <leader>DL :r!date<CR>yypVr=
+nnoremap <leader>DL o<C-r>=strftime('%c')<CR><ESC>:copy.<CR>Vr=
 " Fold the {} you are inside
 nnoremap <leader>F zfa}
 " Toggle search highlighting
