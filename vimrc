@@ -229,6 +229,10 @@ nnoremap <leader>H :let @/=''<Left>
 nnoremap <leader>m :w<CR>:make<CR>
 " Notes file
 nnoremap <leader>n :e ~/.vim/notes.txt<CR>
+" Paste on line Below
+nnoremap <leader>pb :put "<CR>
+" Paste lines of text Inline
+nnoremap <leader>pi i<C-r>"<BS><ESC>
 " Quit
 nnoremap <leader>q :q<CR>
 " Choose a recently opened file
