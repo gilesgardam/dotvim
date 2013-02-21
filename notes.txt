@@ -66,3 +66,7 @@ Use `:argdo` to run a command across all the buffers in `:args`.
 Use regular expressions \zs \ze in :substitute.
 
 Type `:b` and then you can tab complete to an open buffer.
+
+To execute vim command on current line type `yy:@"`.
+
+There are lots of fancy registers ([0-9]-:%/), look them up in help!

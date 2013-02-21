@@ -1,4 +1,5 @@
 " Call me crazy, but restraining yourself can lead to better habits!
+" If you hate this, you might also loathe https://github.com/wikitopian/hardmode
 
 " Use <C-w><C-h> etc instead (holding down control is easier!)
 nnoremap <c-w>h <nop>
