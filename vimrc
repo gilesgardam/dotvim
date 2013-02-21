@@ -227,8 +227,8 @@ nnoremap <silent> <leader>\ :nohls<CR>
 nnoremap <leader>H :let @/=''<Left>
 " Write and make
 nnoremap <leader>m :w<CR>:make<CR>
-" NERDTree
-nnoremap <leader>n :NERDTree<CR>
+" Notes file
+nnoremap <leader>n :e ~/.vim/notes.txt<CR>
 " Quit
 nnoremap <leader>q :q<CR>
 " Choose a recently opened file
