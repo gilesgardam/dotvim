@@ -141,6 +141,8 @@ xmap <C-_> <Plug>Commentary
 nmap <C-_> <Plug>CommentaryLine
 " PANIC!
 nnoremap <F9> mzggg?G'z
+" Change the case of the current word in insert mode
+inoremap <C-u> <ESC>mzg~iw`za
 
 
 " Location
