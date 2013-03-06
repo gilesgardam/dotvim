@@ -143,6 +143,8 @@ nmap <C-_> <Plug>CommentaryLine
 nnoremap <F9> mzggg?G'z
 " Change the case of the current word in insert mode
 inoremap <C-u> <ESC>mzg~iw`za
+" Escape
+inoremap jk <ESC>
 
 
 " Location
