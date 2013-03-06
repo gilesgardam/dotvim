@@ -242,7 +242,9 @@ nnoremap <leader>r :browse oldfiles<CR>
 " have to start by deleting the chunk that is first from the left.
 vnoremap <leader>s <ESC>`.``gvP``P
 " Open the vimrc for editing
-nnoremap <leader>v :e $MYVIMRC<CR>
+nnoremap <leader>v :edit $MYVIMRC<CR>
+" Source the vimrc
+nnoremap <leader>V :source $MYVIMRC<CR>
 " Write the current file
 nnoremap <leader>w :w<CR>
 " Write and quit
