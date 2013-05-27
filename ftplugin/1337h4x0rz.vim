@@ -1,5 +1,5 @@
 " Crazy hacks for the purposes of programming comps like ACM
-" Works in "C-like" languages, but optimized for java.
+" Works in 'C-like' languages, but optimized for java.
 
 
 " COMMENTING

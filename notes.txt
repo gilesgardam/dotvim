@@ -6,7 +6,7 @@ Complicated regular expressions are nice enough with /, since you get
 highlighting, but can be difficult with :substitute, because you don't. So do
 something like /complicatedregex, check highlighting, then use the empty regex
 to match it, for example in :%s///g with <leader>r to delete. You can also
-<c-r>/ to pull from tHE search register (or any other register).
+<c-r>/ to pull from the search register (or any other register).
 
 gi goes into insert mode where you last left it.
 
@@ -70,3 +70,14 @@ Type `:b` and then you can tab complete to an open buffer.
 To execute vim command on current line type `yy:@"`.
 
 There are lots of fancy registers ([0-9]-:%/), look them up in help!
+
+Look at `:help pattern-overview`.
+
+Use <C-]> to trigger abbreviation expansion.
+
+Use the text object `aw` to delete the word under cursor without having to put the
+cursor at the start of the word first (e.g. `fjdaw` to remove 'adjective').
+
+With surround.vim, `S"` will surround the visual selection with double quotes.
+
+Increment all integers (positive and negative) `:%s/-\?\d\+/\=submatch(0)+1/g`.
