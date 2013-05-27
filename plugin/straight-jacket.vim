@@ -17,11 +17,7 @@ nnoremap <up>    <nop>
 nnoremap <right> <nop>
 
 " Use b instead of (
-vnoremap a(  <nop>
-vnoremap i(  <nop>
-nnoremap ci( <nop>
-nnoremap ca( <nop>
-nnoremap di( <nop>
-nnoremap da( <nop>
-nnoremap yi( <nop>
-nnoremap ya( <nop>
+onoremap a( <nop>
+onoremap i( <nop>
+vnoremap a( <nop>
+vnoremap i( <nop>
