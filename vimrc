@@ -238,6 +238,8 @@ nnoremap <silent> <leader>h :nohls<CR>
 nnoremap <silent> <leader>\ :nohls<CR>
 " Highlight a word without moving the cursor
 nnoremap <leader>H :let @/=''<Left>
+" Visually select text that Just changed
+nnoremap <leader>j `[v`]
 " Write and make
 nnoremap <leader>m :write<CR>:make<CR>
 " Notes file
