@@ -17,7 +17,10 @@ set linebreak
 nnoremap j gj
 nnoremap k gk
 " Make windows equal after resize
-au VimResized * exe "normal \<C-w>="
+augroup resizing
+  autocmd!
+  autocmd VimResized * execute "normal \<C-w>="
+augroup END
 " Increase command and search pattern history
 set history=1000
 " Let me hide those modified buffers!
@@ -68,9 +71,11 @@ nnoremap <F5> :GundoToggle<CR>
 " Tags for my personal wiki (abusing vim's help format)
 "
 set tags=tags\ ~/wiki/tags
-autocmd BufWritePost ~/wiki/* :helptags ~/wiki
-autocmd BufNewFile,BufRead ~/wiki/* set filetype=help
-
+augroup wiki
+  autocmd!
+  autocmd BufWritePost ~/wiki/* :helptags ~/wiki
+  autocmd BufNewFile,BufRead ~/wiki/* set filetype=help
+augroup END
 
 " Colours
 "
@@ -182,11 +187,14 @@ nnoremap <C-DOWN> :cwindow 5<CR><C-w>k
 " Highlight trailing whitespace, but not in INSERT mode
 highlight default link TrailingWhitespace Error
 match TrailingWhitespace /\s\+$/
-augroup filetypedetect
-autocmd WinEnter,BufNewFile,BufRead * match TrailingWhitespace /\s\+$/
+augroup trailingwhitespace
+  autocmd!
+  autocmd WinEnter,BufNewFile,BufRead * match TrailingWhitespace /\s\+$/
 augroup END
-autocmd InsertEnter * match none
-autocmd InsertLeave * match TrailingWhitespace /\s\+$/
+augroup insertwhitespace
+  autocmd InsertEnter * match none
+  autocmd InsertLeave * match TrailingWhitespace /\s\+$/
+augroup END
 
 
 function! s:runStuff()
