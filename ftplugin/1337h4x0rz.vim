@@ -1,4 +1,5 @@
 " Crazy hacks for the purposes of programming comps like ACM
+" Works in "C-like" languages, but optimized for java.
 
 
 " COMMENTING
@@ -28,4 +29,4 @@ inoremap <C-d> <C-g>u<Esc>^y$id("<Esc>$a", <C-o>p);
 " Expand `i n` into a `for (int i = 0; i < n; ++i) { }` loop...
 inoremap <C-f> <C-g>u<Esc>:s/\v(\S+)\s+(\S+)/for (int \1 = 0; \1 < \2; ++\1)/<CR>:nohls<CR>A {<CR>}<Esc>O
 " ... and looping in the other direction, `for (int i = n-1; i >= 0; --i) { }`
-"inoremap <C-j> <C-g>u<Esc>:s/\v(\S+)\s+(\S+)/for (int \1 = \2-1; \1 >= 0; --\1)/<CR>:nohls<CR>A {<CR>}<Esc>O
+inoremap <C-j> <C-g>u<Esc>:s/\v(\S+)\s+(\S+)/for (int \1 = \2-1; \1 >= 0; --\1)/<CR>:nohls<CR>A {<CR>}<Esc>O

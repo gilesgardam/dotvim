@@ -1,5 +1,5 @@
-" Insert closing parens
-inoremap <buffer> {<CR> {<CR>}<Esc>O
+" Load settings for 'C-like' languages
+source ~/.vim/ftplugin/c-like.vim
 " Make with javac if no Makefile present
 if !filereadable(expand('%:p:h').'/Makefile')
   setlocal makeprg=javac\ -Xlint\ %
@@ -22,3 +22,5 @@ iabbrev <buffer> HM HashMap
 iabbrev <buffer> HS HashSet
 iabbrev <buffer> LL LinkedList
 iabbrev <buffer> PQ PriorityQueue
+iabbrev <buffer> TS TreeSet
+iabbrev <buffer> TM TreeMap
