@@ -6,6 +6,7 @@ set nocompatible
 set rtp+=$GOROOT/misc/vim
 syntax on
 filetype plugin indent on
+runtime macros/matchit.vim
 set nomodeline
 " Behave yourself, backspace!
 set backspace=indent,eol,start
@@ -230,9 +231,9 @@ nnoremap <silent> <leader>\ :nohls<CR>
 " Highlight a word without moving the cursor
 nnoremap <leader>H :let @/=''<Left>
 " Write and make
-nnoremap <leader>m :w<CR>:make<CR>
+nnoremap <leader>m :write<CR>:make<CR>
 " Notes file
-nnoremap <leader>n :e ~/.vim/notes.txt<CR>
+nnoremap <leader>n :edit ~/.vim/notes.txt<CR>
 " Paste on line Below
 nnoremap <leader>pb :put "<CR>
 " Paste lines of text Inline
