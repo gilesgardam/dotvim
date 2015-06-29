@@ -1,4 +1,4 @@
-" Make with markdown_py if no Makefile present
+" Make with markdown Perl script if no Makefile present
 if !filereadable(expand('%:p:h').'/Makefile')
-  setlocal makeprg=markdown_py\ %\ >\ %:r.html
+  setlocal makeprg=Markdown.pl\ --html4tags\ %\ >\ %:r.html
 endif
