@@ -39,7 +39,7 @@ set nrformats=hex
 " Bells and whistles
 "
 set title
-set wildignore=*.swp,*.bak,*.pyc,*.class,*.aux,*.log
+set wildignore=*.swp,*.bak,*.pyc,*.class,*.aux
 " Toggle INSERT (paste) mode (to avoid autoindents etc.)
 set pastetoggle=<F2>
 " Status line
