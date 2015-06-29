@@ -227,10 +227,14 @@ nnoremap <leader>a :Ack <cword><CR>
 nnoremap <leader>b "_
 " Copy the current file to the X clipboard
 nnoremap <leader>c :!xclip -selection clipboard %<CR><CR>:echo "Copied to X clipboard"<CR>
+" Delete current buffer
+nnoremap <leader>d :bd<CR>
 " Get the current date in the correct short format (e.g. 31/12/99)
 nnoremap <leader>DD i<C-r>=strftime('%d/%m/%y')<CR><ESC>
 " Get the current full date and 'underline' with ========
 nnoremap <leader>DL o<C-r>=strftime('%c')<CR><ESC>:copy.<CR>Vr=
+" Use current file as starting point to edit a new one
+nnoremap <leader>e :e <C-r>%
 " Fold the {} you are inside
 nnoremap <leader>F zfa}
 " Toggle search highlighting
