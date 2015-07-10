@@ -209,6 +209,8 @@ function! s:runStuff()
     execute '!open %:r.pdf'
   elseif &ft == 'markdown'
     execute '!open %:r.html'
+  elseif &ft == 'prolog'
+    execute '!swipl %'
   else
     echo 'Sorry, this does not look like a file I can handle!'
   endif
