@@ -246,6 +246,8 @@ nnoremap <silent> <leader>\ :nohls<CR>
 nnoremap <leader>H :let @/=''<Left>
 " Visually select text that Just changed
 nnoremap <leader>j `[v`]
+" Show the list of buffers
+nnoremap <leader>l :ls<CR>
 " Write and make
 nnoremap <leader>m :write<CR>:make<CR>
 " Notes file
