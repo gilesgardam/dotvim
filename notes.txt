@@ -51,7 +51,8 @@ Use \r to get a newline in :substitute.
 
 Use g; and g, to navigate the change list.
 
-The 0 register stores yanked text, but not deleted text.
+The 0 register stores yanked text, but not deleted text. This makes it useful
+to repeatedly paste over text with the same content.
 
 Append /e to a regex search to go to the end of match (//e if you forgot).
 
