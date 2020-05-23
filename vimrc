@@ -211,6 +211,8 @@ function! s:runStuff()
     execute '!open %:r.html'
   elseif &ft == 'prolog'
     execute '!swipl %'
+  elseif &ft == 'gap'
+    execute '!gap -b %'
   else
     echo 'Sorry, this does not look like a file I can handle!'
   endif
