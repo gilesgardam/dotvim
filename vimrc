@@ -213,6 +213,8 @@ function! s:runStuff()
     execute '!swipl %'
   elseif &ft == 'gap'
     execute '!gap -b %'
+  elseif &ft == 'lean'
+    execute '!lean %'
   else
     echo 'Sorry, this does not look like a file I can handle!'
   endif
