@@ -82,3 +82,21 @@ cursor at the start of the word first (e.g. `fjdaw` to remove 'adjective').
 With surround.vim, `S"` will surround the visual selection with double quotes.
 
 Increment all integers (positive and negative) `:%s/-\?\d\+/\=submatch(0)+1/g`.
+
+To insert previous text, but e.g. changing over a different motion, just
+    c<motion><C-a>
+
+For completion, <C-n> and <C-p> look forwards and backwards respectively through your document for completion, and you probably want <C-p>.
+
+Have a look in `:help i_CTRL-X_CTRL-S`
+
+Move around in files efficiently with "hyperlinks"
+    gf          go to file under cursor
+    gF          go to file under cursor at the specified line
+    <C-x><C-f>  filename completion
+    "#          register with name of alternate file
+    <leader>r   show list of recent files
+
+You can repeat <C-x><C-p> to draw in more words from the source.
+
+Insert word under cursor in command line with <C-w><C-r>.
