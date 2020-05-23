@@ -27,7 +27,7 @@
 	url = https://github.com/tpope/vim-repeat.git
 [submodule "bundle/vim-commentary"]
 	path = bundle/vim-commentary
-	url = ssh://git@github.com/tpope/vim-commentary.git
+	url = https://github.com/tpope/vim-commentary.git
 [submodule "bundle/lean.vim"]
 	path = bundle/lean.vim
 	url = https://github.com/leanprover/lean.vim.git
