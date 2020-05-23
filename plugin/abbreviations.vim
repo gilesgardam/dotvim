@@ -1,2 +1,9 @@
+ia Dispaly Display
+ia gropu group
+ia gruop group
+ia gruops groups
+ia hyperoblic hyperbolic
+ia taht that
 ia teh the
+ia thoerem theorem
 ia thoery theory
